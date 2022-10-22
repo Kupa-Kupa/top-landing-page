@@ -1,0 +1,167 @@
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #F9FAF8;
+    display: flex;
+    flex-direction: column;
+}
+
+/*--- Header CSS ---*/
+
+header {
+    background-color: #1F2937;
+    padding: 1em;
+    /* turned header into a flex container so I could centre 
+    vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    /* I want page content to be a max-width of 1400px*/
+    max-width: 1400px;
+    /* I want to nav section to fill the available width */
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F9FAF8;
+}
+
+.header-link-container > ul {
+    display: flex;
+    gap: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+
+/*--- Hero CSS ---*/
+
+.hero {
+    background-color: #1F2937;
+}
+
+.hero > h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: bolder;
+    color: #F9FAF8;
+}
+
+.hero > p {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+button {
+    color: #F9FAF8;
+    background-color: #3882F6;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.hero > button {
+    border-color: #1F2937;  
+}
+
+
+/*--- Main CSS ---*/
+
+main {
+    /* I want to center the main content but don't want to lose 
+    the background color which happens with align-items: center; */
+    text-align: center;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*--- Figure CSS ---*/
+
+.figures {
+    color: #1F2937;
+}
+
+.figures h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+}
+
+
+/*--- Quote CSS ---*/
+
+.quote {
+    background-color: #E5E7EB;
+    color: #1F2937;
+}
+
+.quote blockquote {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.quote figcaption {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/*--- Call 2 Action CSS ---*/
+
+.call-container {
+    padding: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.call2action {
+    background-color: #3882F6;
+    width: 60%;
+    padding: 2em;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/*--- Footer CSS ---*/
+
+footer {
+    background-color: #1F2937;
+    padding: 2em;
+    text-align: center;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
