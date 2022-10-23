@@ -7,13 +7,25 @@ body {
     color: #F9FAF8;
     display: flex;
     flex-direction: column;
+
 }
+
+button {
+    color: #F9FAF8;
+    background-color: #3882F6;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 28px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 
 /*--- Header CSS ---*/
 
 header {
     background-color: #1F2937;
-    padding: 1em;
+    padding: 18px;
     /* turned header into a flex container so I could centre 
     vertically and horizontally */
     display: flex;
@@ -22,8 +34,8 @@ header {
 }
 
 nav {
-    /* I want page content to be a max-width of 1400px*/
-    max-width: 1400px;
+    /* I want page content to be a max-width of 1025px*/
+    max-width: 1025px;
     /* I want to nav section to fill the available width */
     flex: 1;
     display: flex;
@@ -39,7 +51,7 @@ nav {
 
 .header-link-container > ul {
     display: flex;
-    gap: 1em;
+    gap: 25px;
 }
 
 nav ul {
@@ -55,44 +67,12 @@ nav a {
 }
 
 
-/*--- Hero CSS ---*/
-
-.hero {
-    background-color: #1F2937;
-}
-
-.hero > h1 {
-    margin: 0;
-    font-size: 48px;
-    font-weight: bolder;
-    color: #F9FAF8;
-}
-
-.hero > p {
-    font-size: 18px;
-    color: #E5E7EB;
-}
-
-button {
-    color: #F9FAF8;
-    background-color: #3882F6;
-    border: 2px solid white;
-    border-radius: 5px;
-    padding: 10px;
-
-}
-
-.hero > button {
-    border-color: #1F2937;  
-}
-
-
 /*--- Main CSS ---*/
 
 main {
     /* I want to center the main content but don't want to lose 
     the background color which happens with align-items: center; */
-    text-align: center;
+    /* text-align: center; */
 
     flex: 1;
     display: flex;
@@ -100,42 +80,57 @@ main {
 }
 
 
-/*--- Figure CSS ---*/
+/*--- Hero CSS ---*/
 
-.figures {
-    color: #1F2937;
+.hero-container {
+    background-color: #1F2937;
+    padding: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.figures h2 {
-    font-size: 36px;
+.hero {
+    /* I want page content to be a max-width of 1025px*/
+    max-width: 1025px;
+    padding: 90px 0 120px 0;
+    
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-text, .hero-image {
+    flex: 1;
+}
+
+.hero-text {
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.hero-text > h1 {
+    margin: 0;
+    font-size: 48px;
     font-weight: bolder;
-    color: #1F2937;
+    color: #F9FAF8;
 }
 
-
-/*--- Quote CSS ---*/
-
-.quote {
-    background-color: #E5E7EB;
-    color: #1F2937;
+.hero-text > p {
+    font-size: 18px;
+    color: #E5E7EB;
+    margin: 0 0 10px 0;
 }
 
-.quote blockquote {
-    font-size: 36px;
-    font-weight: 300;
-    font-style: italic;
+.hero-text > button {
+    border-width: 0;  
 }
 
-.quote figcaption {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-/*--- Call 2 Action CSS ---*/
-
-.call-container {
-    padding: 4em;
+.hero-image {
+    flex: 1.2;
+    background-color: #6d747d;
+    width: 525px;
 
     display: flex;
     justify-content: center;
@@ -143,17 +138,133 @@ main {
 }
 
 
+/*--- Figure CSS ---*/
+
+.information-container {
+    color: #1F2937;
+    padding: 20px 16px 105px 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information {
+    /* I want page content to be a max-width of 1025px*/
+    max-width: 1025px;
+}
+
+.information h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    text-align: center;
+}
+
+.figures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+
+    text-align: center;
+    margin: 0;
+}
+
+figure {
+    flex: 0;
+    margin: 16px 0;
+}
+
+figure > img {
+    width: 160px;
+    height: 160px;
+    border: 3px solid blue;
+    border-radius: 15px;
+}
+
+figcaption {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+
+/*--- Quote CSS ---*/
+
+.quote-container {
+    background-color: #E5E7EB;
+    color: #1F2937;
+    padding: 130px 0 105px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    /* I want page content to be a max-width of 1025px*/
+    max-width: 1025px;
+}
+
+.quote figure {
+    margin: 0 120px;
+}
+
+.quote blockquote {
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0;
+}
+
+.quote p {
+    margin: 0;
+}
+
+.quote figcaption {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: end;
+    margin: 0 30px 0 0;
+}
+
+
+/*--- Call 2 Action CSS ---*/
+
+.call-container {
+    padding: 100px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .call2action {
+    /* I should have set this globally, but works fine here as well */
+    box-sizing: border-box;
+    /* I want page content to be a max-width of 1025px*/
+    max-width: 1025px;
+    flex: 1;
     background-color: #3882F6;
-    width: 60%;
-    padding: 2em;
+    padding: 50px 120px;
     border-radius: 10px;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center; 
 }
+
+.call2action h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.call2action p {
+    font-size: 18px;
+    margin: 0;
+}
+
 
 /*--- Footer CSS ---*/
 
